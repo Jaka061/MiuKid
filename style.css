@@ -2,8 +2,9 @@
 *{
     box-sizing: border-box; /*ширина/высота блока не будет зависеть от содержимого блока */
 }
-body{
+body ,p{
     margin: 0;
+   
     
 }
 .verh_m{
@@ -12,7 +13,7 @@ body{
     background-color: #f4f4f4;
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto; /* center*/
 }
 .left , .ul_li li{
@@ -28,5 +29,81 @@ body{
     margin: 0;
 }
 .ul_li li{
-    padding: 15px 15px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+.verh_m .ul_li i{
+    margin-right: 5px;
+}
+.b-r li{
+    border-right: 1px solid #dddddd;
+}
+.b-r li:last-child{
+    border-right: 0
+}
+
+.icon-gift{
+    position: relative; /*ограничивает absolute -контейнер- */
+}
+.gift{
+    position: absolute; /*абсолютное позиционирования */
+    top: -5px;
+    right: 2px;
+    background-color: #e53556;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    line-height: 1.5;
+    border-radius: 13px;
+}
+/* position - общ.стр *
+
+Srednee Menu*/
+.center_m ul{
+    display: flex;  /* display - это блок отображения .
+    возможность вариации отображения*/
+    justify-content: space-between;  /* все элементы распологаются на равном растоянии друг от друга*/
+    align-items: center;   /*по центру не зависмо от высоьы и ширины */
+}
+.logo{
+    padding-top: 1rem;
+}
+.img_logo{
+    vertical-align: middle;
+    border-style: none;
+}
+span.gray_circle {
+    background-color: #f4f4f4;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    border-radius: 20px;
+}
+.for_p{
+    margin-left: 10px;
+}
+.center_m .right.for_p p:first-child{
+    font-weight: bold;
+    color: rgb(19, 19, 88);
+}
+.center_m .right > p {
+    color: gray;
+    padding: 2px;
+}
+.status_close{
+    color: red;
+    font-weight: bold;
+}
+.sale{
+    color: rgb(250, 114, 3)
+}
+.number{
+    color: rgb(0, 110, 255)
+}
+.logo .b-r li:first-child{
+    border-right: 0;
 }
